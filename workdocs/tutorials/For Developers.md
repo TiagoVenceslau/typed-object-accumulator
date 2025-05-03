@@ -194,12 +194,9 @@ When the `-no-ci` flag is passed then you can:
 ### Repository Structure
 
 ```
-ts-workspace
+typed-object-accumulator
 │
 │   .confluence-token               <-- stores confluence access token
-│   .dockerignore                   <-- Defines files by docker in the build image
-│   .dockeruser                     <-- stores docker registry user
-│   .dockertoken                    <-- stores docker registry access token
 │   .gitignore                      <-- Defines files ignored to git
 │   .gitlab-ci.yml                  <-- CI behaviour for gitlab
 │   .npmignore                      <-- Defines files ignored by npm

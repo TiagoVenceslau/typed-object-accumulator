@@ -32,8 +32,8 @@
       "useLongnameInNav": false
     },
     "better-docs": {
-      "name": "ts-template",
-      "title": "TypeScript workspace template",
+      "name": "typed-object-accumulator",
+      "title": "Typed Object accumulator",
       "hideGenerator": true,
       "useLongnameInNav": false,
       "navLinks": [

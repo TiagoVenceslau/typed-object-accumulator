@@ -1,4 +1,3 @@
-[![Banner](./workdocs/assets/Banner.png)](https://decaf-ts.github.io/ts-workspace/)
-## Typescript Template
+## Typed Object Accumulator
 
 This repository is meant to provide an enterprise template for any standard Typescript project

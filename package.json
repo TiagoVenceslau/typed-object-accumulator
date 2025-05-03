@@ -1,7 +1,7 @@
 {
-  "name": "@decaf-ts/ts-workspace",
-  "version": "3.9.0",
-  "description": "template for ts projects",
+  "name": "typed-object-accumulator",
+  "version": "0.0.1",
+  "description": "Class capable of accumulation properties and types",
   "type": "module",
   "exports": {
     "require": "./lib/index.cjs",
@@ -41,7 +41,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/decaf-ts/ts-workspace.git"
+    "url": "git+https://github.com/TiagoVenceslau/typed-object-accumulator.git"
   },
   "engines": {
     "node": ">=20.0.0",
@@ -52,32 +52,20 @@
     "dist"
   ],
   "keywords": [
-    "plantuml",
-    "mermaid",
-    "uml",
-    "drawio",
-    "mddocs",
-    "md",
-    "jsdoc",
-    "doc",
-    "docs",
-    "documentation",
-    "test",
-    "reports",
-    "confluence",
-    "ci/cd",
-    "ci",
-    "cd",
-    "template",
+    "typed",
+    "types-safe",
+    "object",
+    "config",
+    "environment",
+    "accumulator",
     "typescript",
     "ts"
   ],
   "author": "Tiago Venceslau",
-  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/decaf-ts/ts-workspace/issues"
+    "url": "https://github.com/TiagoVenceslau/typed-object-accumulator/issues"
   },
-  "homepage": "https://github.com/decaf-ts/ts-workspace#readme",
+  "homepage": "https://github.com/TiagoVenceslau/typed-object-accumulator#readme",
   "devDependencies": {
     "@eslint/js": "^9.25.1",
     "@rollup/plugin-commonjs": "^28.0.3",

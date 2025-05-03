@@ -1,24 +1,22 @@
 import * as fs from "fs";
 import { Dirent } from "fs";
 import * as path from "path";
+import { ObjectAccumulator } from "../../src";
 
 describe("Distribution Tests", () => {
   it("reads lib", () => {
-    const {
-      VERSION,
-      complexFunction,
-      ChildClass,
-    } = require("../../lib/index.cjs");
+    const { VERSION, ObjectAccumulator } = require("../../lib/index.cjs");
     expect(VERSION).toBeDefined();
-    expect(complexFunction).toBeDefined();
-    expect(ChildClass).toBeDefined();
+    expect(ObjectAccumulator).toBeDefined();
   });
 
   it("reads JS Bundle", () => {
     let distFile: Dirent[];
     try {
       distFile = fs
-        .readdirSync(path.join(__dirname, "../../dist"), { withFileTypes: true })
+        .readdirSync(path.join(__dirname, "../../dist"), {
+          withFileTypes: true,
+        })
         .filter((d) => d.isFile() && !d.name.endsWith("esm.js"));
     } catch (e: unknown) {
       throw new Error("Error reading JS bundle: " + e);
@@ -27,11 +25,10 @@ describe("Distribution Tests", () => {
     if (distFile.length === 0)
       throw new Error("There should only be a js file in directory");
 
-    const { VERSION, complexFunction, ChildClass } = require(
+    const { VERSION, ObjectAccumulator } = require(
       `../../dist/${distFile[0].name}`
     );
     expect(VERSION).toBeDefined();
-    expect(complexFunction).toBeDefined();
-    expect(ChildClass).toBeDefined();
+    expect(ObjectAccumulator).toBeDefined();
   });
 });
