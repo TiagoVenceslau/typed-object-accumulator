@@ -1,12 +1,12 @@
 import * as fs from "fs";
 import { Dirent } from "fs";
 import * as path from "path";
-import { ObjectAccumulator } from "../../src";
+import pkg from "../../package.json";
 
 describe("Distribution Tests", () => {
   it("reads lib", () => {
     const { VERSION, ObjectAccumulator } = require("../../lib/index.cjs");
-    expect(VERSION).toBeDefined();
+    expect(VERSION).toEqual(pkg.version);
     expect(ObjectAccumulator).toBeDefined();
   });
 
@@ -28,7 +28,7 @@ describe("Distribution Tests", () => {
     const { VERSION, ObjectAccumulator } = require(
       `../../dist/${distFile[0].name}`
     );
-    expect(VERSION).toBeDefined();
+    expect(VERSION).toEqual(pkg.version);
     expect(ObjectAccumulator).toBeDefined();
   });
 });

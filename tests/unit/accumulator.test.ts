@@ -1,10 +1,14 @@
-import { ObjectAccumulator } from "../../src/accumulator";
+import { ObjectAccumulator, VERSION } from "../../src";
 
 describe("ObjectAccumulator", () => {
   let accumulator: ObjectAccumulator<any>;
 
   beforeEach(() => {
     accumulator = new ObjectAccumulator();
+  });
+
+  test("VERSION should be defined", () => {
+    expect(VERSION).toBeDefined();
   });
 
   it("should accumulate multiple objects and correctly update the union type", () => {
