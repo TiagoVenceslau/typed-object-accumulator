@@ -72,9 +72,9 @@ export class ObjectAccumulator<T extends object> {
    * @summary Gets a value from the accumulated object using a type-safe key
    * @template K - The key type, must be a key of this
    * @param {K} key - The key of the value to retrieve
-   * @returns {any | undefined} The value associated with the key, or undefined if not found
+   * @returns {any} The value associated with the key
    */
-  get<K extends keyof this>(key: K): this[K] | undefined {
+  get<K extends keyof this>(key: K): this[K] {
     return this[key];
   }
 
