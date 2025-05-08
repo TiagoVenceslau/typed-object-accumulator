@@ -70,12 +70,29 @@ export class ObjectAccumulator<T extends object> {
   /**
    * @description Retrieves a value from the accumulator by its key
    * @summary Gets a value from the accumulated object using a type-safe key
+   * @template T - value type
    * @template K - The key type, must be a key of this
    * @param {K} key - The key of the value to retrieve
-   * @returns {any} The value associated with the key
+   * @returns The value associated with the key
    */
-  get<K extends keyof this>(key: K): this[K] {
-    return this[key];
+  get<K extends keyof T>(key: K): T[K] {
+    if (!(key in this))
+      throw new Error(
+        `Key ${key as string} does not exist in accumulator. Available keys: ${this.keys().join(
+          ", "
+        )}`
+      );
+    return (this as any)[key as K] as T[K];
+  }
+
+  /**
+   * @description Retrieves a value from the accumulator by its key
+   * @summary Gets a value from the accumulated object using a type-safe key
+   * @param {string} key - The key of the value to retrieve
+   * @param {any} value - The key of the value to retrieve
+   */
+  put(key: string, value: any) {
+    return this.accumulate({ [key]: value });
   }
 
   /**

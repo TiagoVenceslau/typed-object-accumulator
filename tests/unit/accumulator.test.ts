@@ -64,14 +64,12 @@ describe("ObjectAccumulator", () => {
     expect(accumulatorWithObjects.get("age")).toBe(30);
     expect(accumulatorWithObjects.get("city")).toBe("New York");
     expect(accumulatorWithObjects.get("country")).toBe("USA");
-    expect(accumulatorWithObjects.get("nonexistent")).toBeUndefined();
   });
 
-  it("should return undefined when getting a non-existent key", () => {
+  it("should throw error when getting a non-existent key", () => {
     const accumulator = new ObjectAccumulator<{ testKey: string }>();
     // @ts-expect-error deliberately passing a non-existing key
-    const result = accumulator.get("nonExistentKey");
-    expect(result).toBeUndefined();
+    expect(() => accumulator.get("nonExistentKey")).toThrow();
   });
 
   it("should correctly check if an object is registered using the 'has' method", () => {
