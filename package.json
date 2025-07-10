@@ -1,6 +1,6 @@
 {
   "name": "typed-object-accumulator",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Class capable of accumulation properties and types",
   "type": "module",
   "exports": {
