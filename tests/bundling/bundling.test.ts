@@ -5,7 +5,7 @@ import pkg from "../../package.json";
 
 describe("Distribution Tests", () => {
   it("reads lib", () => {
-    const { VERSION, ObjectAccumulator } = require("../../lib/index.cjs");
+    const { VERSION, ObjectAccumulator } = require("../../lib/cjs/index.cjs");
     expect(VERSION).toEqual(pkg.version);
     expect(ObjectAccumulator).toBeDefined();
   });

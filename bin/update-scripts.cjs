@@ -7171,7 +7171,7 @@ class Logging {
                         logger.error(`Not a valid theme option: ${option}`);
                         return t;
                 }
-                // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                 
             }
             catch (e) {
                 logger.error(`Error applying style: ${option} with value ${value}`);
@@ -10682,7 +10682,7 @@ class TemplateSync extends Command {
                 let status;
                 try {
                     status = fs.existsSync(token);
-                    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+                     
                 }
                 catch (e) {
                     log.info(`Token file ${token} not found. Creating a new one...`);
