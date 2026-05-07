@@ -67,5 +67,8 @@
   "homepage": "https://github.com/TiagoVenceslau/typed-object-accumulator#readme",
   "devDependencies": {
     "@decaf-ts/utils": "latest"
+  },
+  "dependencies": {
+    "user": "^0.0.0"
   }
 }
